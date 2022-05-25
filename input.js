@@ -86,7 +86,7 @@ customElements.define('u1-input', class extends HTMLElement {
 
 
 
-
+/* old code
 
 document.head.prepend(c1.dom.fragment(
     '<style>\
@@ -140,24 +140,29 @@ document.head.prepend(c1.dom.fragment(
     </style>'
 ));
 
-c1.onElement('.b1-up-down-input',function(el){
-    var input = el.c1Find('input');
-    var up   = c1.dom.fragment('<button type=button aria-hidden=true tabindex=-1><span>+</span><svg viewBox="0 0 24 24"><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>').firstChild; // "+"-char: ally, baseline works | span: currentColor works
-    var down = c1.dom.fragment('<button type=button aria-hidden=true tabindex=-1><span>-</span><svg viewBox="0 0 24 24"><path d="M19,13H5V11H19V13Z" /></svg>').firstChild;
-    up.classList.add('-up');
-    down.classList.add('-down');
-    function onclick(e){
-        //e.preventDefault(); // zzz not needed!
-		var oldVal = input.value
-		this.classList.contains('-up') ? input.stepUp() : input.stepDown();
-		if (input.value !== oldVal) {
-			input.dispatchEvent( new CustomEvent('input',{bubbles:true,cancelable:true}) );
-			input.dispatchEvent( new CustomEvent('change',{bubbles:true,cancelable:true}) );
-		}
-    }
-    up.addEventListener('click',onclick);
-    down.addEventListener('click',onclick);
-    input.after(up);
-	// also after! because label triggers the first form-element (changed order in css)
-    input.after(down);
-});
+
+new SelectorObserver({
+    on: el => {
+        var input = el.c1Find('input');
+        var up   = c1.dom.fragment('<button type=button aria-hidden=true tabindex=-1><span>+</span><svg viewBox="0 0 24 24"><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>').firstChild; // "+"-char: ally, baseline works | span: currentColor works
+        var down = c1.dom.fragment('<button type=button aria-hidden=true tabindex=-1><span>-</span><svg viewBox="0 0 24 24"><path d="M19,13H5V11H19V13Z" /></svg>').firstChild;
+        up.classList.add('-up');
+        down.classList.add('-down');
+        function onclick(e){
+            //e.preventDefault(); // zzz not needed!
+            var oldVal = input.value
+            this.classList.contains('-up') ? input.stepUp() : input.stepDown();
+            if (input.value !== oldVal) {
+                input.dispatchEvent( new CustomEvent('input',{bubbles:true,cancelable:true}) );
+                input.dispatchEvent( new CustomEvent('change',{bubbles:true,cancelable:true}) );
+            }
+        }
+        up.addEventListener('click',onclick);
+        down.addEventListener('click',onclick);
+        input.after(up);
+        // also after! because label triggers the first form-element (changed order in css)
+        input.after(down);
+    },
+}).observe('.b1-up-down-input');
+
+*/
