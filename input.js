@@ -10,15 +10,15 @@ customElements.define('u1-input', class extends HTMLElement {
         <style>
         :host {
             display: inline-flex;
-            border:1px solid;
+            border: 1px solid;
         }
         ::slotted(input), ::slotted(textarea), ::slotted(select) {
-            margin:0;
-            border:none;
+            margin: 0;
+            border: 0;
         }
         button {
-            border:none;
-            background-color:transparent;
+            border: 0;
+            background-color: transparent;
         }
         </style>
         <slot><input></slot>
