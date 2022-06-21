@@ -1,6 +1,65 @@
-# u1-input.el
-Better inputs
+# &lt;u1-u1-input&gt; - element
+undefined
 
 ## Demo
+
 https://raw.githack.com/u1ui/u1-input.el/main/tests/minimal.html  
+
+## Ussage
+
+```html
+<input type=text>
+
+<u1-input type=textarea>inhalt</u1-input>
+
+<u1-input type=text>inhalt</u1-input>
+
+<u1-input type=checkbox on="on" off="off">on</u1-input>
+
+<u1-input type=select>
+</u1-input>
+
+<u1-input>
+    <input type=text>
+</u1-input>
+
+<u1-input>
+    <input type=checkbox value="yes" checked>
+</u1-input>
+
+<u1-input>
+    <select>
+        <option value="1">One
+        <option value="2" selected>Two
+        <option value="3">Three
+    </select>
+</u1-input>
+
+<u1-input>
+    <textarea name="test">
+        diest ist
+        der Inhalt
+    </textarea>
+</u1-input>
+
+<u1-input>
+    <input type=date>
+</u1-input>
+
+<u1-input>
+    <input type=datetime-local>
+</u1-input>
+```
+
+## Install
+
+```html
+<link href="https://cdn.jsdelivr.net/gh/u1ui/u1-input.el@x.x.x/u1-input.min.css" rel=stylesheet>
+<script src="https://cdn.jsdelivr.net/gh/u1ui/u1-input.el@x.x.x/u1-input.min.js" type=module>
+```
+
+## About
+
+- MIT License, Copyright (c) 2022 <u1> (like all repositories in this organization) <br>
+- Suggestions, ideas, finding bugs and making pull requests make us very happy. ♥
 
