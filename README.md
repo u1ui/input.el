@@ -47,6 +47,10 @@ undefined
 </u1-input>
 ```
 
+```css
+
+```
+
 ## Install
 
 ```html
@@ -56,7 +60,7 @@ undefined
 
 ## Demos
 
-[minimal.html](https://raw.githack.com/u1ui/u1-input.el/main/tests/minimal.html)  
+[minimal.html](http://gcdn.li/u1ui/u1-input.el@main/tests/minimal.html)  
 
 ## About
 
