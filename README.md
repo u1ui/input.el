@@ -1,4 +1,4 @@
-# &lt;u1-u1-input&gt; - element
+# &lt;u1-input&gt; - element
 undefined
 
 ## Ussage
@@ -54,13 +54,13 @@ undefined
 ## Install
 
 ```html
-<link href="https://cdn.jsdelivr.net/gh/u1ui/u1-input.el@x.x.x/u1-input.min.css" rel=stylesheet>
-<script src="https://cdn.jsdelivr.net/gh/u1ui/u1-input.el@x.x.x/u1-input.min.js" type=module>
+<link href="https://cdn.jsdelivr.net/gh/u1ui/input.el@x.x.x/input.min.css" rel=stylesheet>
+<script src="https://cdn.jsdelivr.net/gh/u1ui/input.el@x.x.x/input.min.js" type=module>
 ```
 
 ## Demos
 
-[minimal.html](http://gcdn.li/u1ui/u1-input.el@main/tests/minimal.html)  
+[minimal.html](http://gcdn.li/u1ui/input.el@main/tests/minimal.html)  
 
 ## About
 
