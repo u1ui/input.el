@@ -39,7 +39,6 @@ customElements.define('u1-input', class extends HTMLElement {
         }
         this.setAttribute('value', this.realInput.value)
         this.setAttribute('name', this.realInput.name)
-
     }
 
 
